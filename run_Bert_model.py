@@ -183,7 +183,8 @@ def model_train_validate_test(train_df, dev_df, test_df, target_dir,
         if patience_counter >= patience:
             print("-> Early stopping: patience limit reached, stopping...")
             break
-    return model
+
+    return model, device
 
 
 def model_load_test(test_df, target_dir, test_prediction_dir, test_prediction_name, max_seq_len=50, batch_size=32):
